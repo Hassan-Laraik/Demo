@@ -1,0 +1,36 @@
+object DM: TDM
+  OldCreateOrder = False
+  Height = 534
+  HorizontalOffset = 0
+  VerticalOffset = 156
+  Width = 1087
+  PPI = 81
+  object ZNX: TZConnection
+    ControlsCodePage = cCP_UTF8
+    Properties.Strings = (
+      'RawStringEncoding=DB_CP'
+    )
+    Connected = True
+    DisableSavepoints = False
+    HostName = 'localhost'
+    Port = 0
+    Database = 'tsdi2024'
+    User = 'root'
+    Password = '12345678'
+    Protocol = 'mysql'
+    Left = 105
+    Top = 24
+  end
+  object ZtblProduits: TZTable
+    Connection = ZNX
+    Active = True
+    TableName = 'produits'
+    Left = 108
+    Top = 101
+  end
+  object DSProduits: TDataSource
+    DataSet = ZtblProduits
+    Left = 96
+    Top = 170
+  end
+end

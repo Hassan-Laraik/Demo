@@ -1,0 +1,203 @@
+object Form1: TForm1
+  Left = 219
+  Height = 431
+  Top = 182
+  Width = 542
+  Caption = 'Form1'
+  ClientHeight = 431
+  ClientWidth = 542
+  DesignTimePPI = 81
+  OnCreate = FormCreate
+  LCLVersion = '3.2.0.0'
+  object Panel1: TPanel
+    Left = 0
+    Height = 42
+    Top = 0
+    Width = 542
+    Align = alTop
+    Caption = 'Panel1'
+    TabOrder = 0
+  end
+  object Panel2: TPanel
+    Left = 0
+    Height = 42
+    Top = 389
+    Width = 542
+    Align = alBottom
+    Caption = 'Panel2'
+    TabOrder = 1
+  end
+  object Panel3: TPanel
+    Left = 0
+    Height = 42
+    Top = 347
+    Width = 542
+    Align = alBottom
+    Caption = 'Panel3'
+    ClientHeight = 42
+    ClientWidth = 542
+    TabOrder = 2
+    object BtnNouveau: TButton
+      Left = 1
+      Height = 40
+      Top = 1
+      Width = 104
+      Align = alLeft
+      Caption = 'BtnNouveau'
+      TabOrder = 0
+      OnClick = BtnNouveauClick
+    end
+    object BtnModifier: TButton
+      Left = 105
+      Height = 40
+      Top = 1
+      Width = 104
+      Align = alLeft
+      Caption = 'BtnModifier'
+      TabOrder = 1
+      OnClick = BtnModifierClick
+    end
+    object BtnSuprimer: TButton
+      Left = 209
+      Height = 40
+      Top = 1
+      Width = 104
+      Align = alLeft
+      Caption = 'BtnSuprimer'
+      TabOrder = 2
+      OnClick = BtnSuprimerClick
+    end
+    object BtnAnnuler: TButton
+      Left = 313
+      Height = 40
+      Top = 1
+      Width = 104
+      Align = alLeft
+      Caption = 'BtnAnnuler'
+      TabOrder = 3
+      OnClick = BtnAnnulerClick
+    end
+    object BtnValider: TButton
+      Left = 417
+      Height = 40
+      Top = 1
+      Width = 104
+      Align = alLeft
+      Caption = 'BtnValider'
+      TabOrder = 4
+      OnClick = BtnValiderClick
+    end
+  end
+  object DBEdit1: TDBEdit
+    Left = 104
+    Height = 33
+    Top = 56
+    Width = 231
+    DataField = 'codep'
+    DataSource = DM.DSProduits
+    Alignment = taRightJustify
+    MaxLength = 0
+    TabOrder = 3
+    OnChange = DBEdit1Change
+  end
+  object DbedtMarque: TDBEdit
+    Left = 104
+    Height = 33
+    Top = 104
+    Width = 231
+    DataField = 'marque'
+    DataSource = DM.DSProduits
+    MaxLength = 40
+    TabOrder = 4
+    OnChange = DBEdit1Change
+  end
+  object DbedtCouleur: TDBEdit
+    Left = 104
+    Height = 33
+    Top = 152
+    Width = 231
+    DataField = 'couleur'
+    DataSource = DM.DSProduits
+    MaxLength = 15
+    TabOrder = 5
+    OnChange = DBEdit1Change
+  end
+  object DbedtTarif: TDBEdit
+    Left = 104
+    Height = 33
+    Top = 200
+    Width = 231
+    DataField = 'tarif'
+    DataSource = DM.DSProduits
+    Alignment = taRightJustify
+    MaxLength = 0
+    TabOrder = 6
+    OnChange = DBEdit1Change
+  end
+  object DbedtTaille: TDBEdit
+    Left = 104
+    Height = 33
+    Top = 248
+    Width = 231
+    DataField = 'taille'
+    DataSource = DM.DSProduits
+    Alignment = taRightJustify
+    MaxLength = 0
+    TabOrder = 7
+    OnChange = DBEdit1Change
+  end
+  object DbedtPoid: TDBEdit
+    Left = 104
+    Height = 33
+    Top = 296
+    Width = 231
+    DataField = 'poid'
+    DataSource = DM.DSProduits
+    Alignment = taRightJustify
+    MaxLength = 0
+    TabOrder = 8
+    OnChange = DBEdit1Change
+  end
+  object Label1: TLabel
+    Left = 32
+    Height = 16
+    Top = 64
+    Width = 42
+    Caption = 'Label1'
+  end
+  object Label2: TLabel
+    Left = 24
+    Height = 16
+    Top = 104
+    Width = 48
+    Caption = 'marque'
+  end
+  object Label3: TLabel
+    Left = 24
+    Height = 16
+    Top = 160
+    Width = 47
+    Caption = 'couleur'
+  end
+  object Label4: TLabel
+    Left = 40
+    Height = 16
+    Top = 208
+    Width = 27
+    Caption = 'tarif'
+  end
+  object Label5: TLabel
+    Left = 39
+    Height = 16
+    Top = 256
+    Width = 33
+    Caption = 'taille'
+  end
+  object Label6: TLabel
+    Left = 39
+    Height = 16
+    Top = 304
+    Width = 28
+    Caption = 'poid'
+  end
+end
