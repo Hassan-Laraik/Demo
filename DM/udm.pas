@@ -28,6 +28,7 @@ type
     function IsInsertProduit() : Boolean ;
     function IsEditProduit() : Boolean  ;
     function IsBrowseProduit() : Boolean  ;
+    function RechercherProduit(aRecherche : string):boolean;
 
   end;
 
@@ -97,6 +98,13 @@ end;
 function TDM.IsEditOrInsertProduit: Boolean;
 begin
     Result := (Self.ZtblProduits.State in [dsEdit,dsInsert]);
+end;
+
+function TDM.RechercherProduit(aRecherche: string): boolean;
+begin
+  Result := False;
+  if  not self.ZtblProduits.IsEmpty then
+  Result :=  self.ZtblProduits.Locate('marque',trim(aRecherche),[]);
 end;
 
 end.

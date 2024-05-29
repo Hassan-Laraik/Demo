@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ExtCtrls, StdCtrls,
-  DBCtrls;
+  DBCtrls, DBGrids;
 
 type
 
@@ -15,25 +15,29 @@ type
   TForm1 = class(TForm)
     Panel1: TPanel;
     Panel2: TPanel;
+    DBEdit2: TDBEdit;
+    DBGrid1: TDBGrid;
+    Panel4: TPanel;
+    Label1: TLabel;
+    DBEdit1: TDBEdit;
+    Label2: TLabel;
+    DbedtMarque: TDBEdit;
+    Label3: TLabel;
+    DbedtCouleur: TDBEdit;
+    Label4: TLabel;
+    DbedtTarif: TDBEdit;
+    Label5: TLabel;
+    DbedtTaille: TDBEdit;
+    Label6: TLabel;
+    DbedtPoid: TDBEdit;
     Panel3: TPanel;
+    EdtRechercher: TEdit;
+    BtnRechercher: TButton;
     BtnNouveau: TButton;
     BtnModifier: TButton;
     BtnSuprimer: TButton;
     BtnAnnuler: TButton;
     BtnValider: TButton;
-    DBEdit1: TDBEdit;
-    DBEdit2: TDBEdit;
-    DbedtCouleur: TDBEdit;
-    DbedtTarif: TDBEdit;
-    DbedtTaille: TDBEdit;
-    DbedtPoid: TDBEdit;
-    DbedtMarque: TDBEdit;
-    Label1: TLabel;
-    Label2: TLabel;
-    Label3: TLabel;
-    Label4: TLabel;
-    Label5: TLabel;
-    Label6: TLabel;
     procedure FormCreate(Sender: TObject);
     procedure BtnValiderClick(Sender: TObject);
     procedure BtnNouveauClick(Sender: TObject);
@@ -41,6 +45,7 @@ type
     procedure BtnSuprimerClick(Sender: TObject);
     procedure BtnAnnulerClick(Sender: TObject);
     procedure DBEdit1Change(Sender: TObject);
+    procedure BtnRechercherClick(Sender: TObject);
   private
      function ValiderSaisieProduit(): boolean;
      procedure GestionBottons;
@@ -162,6 +167,12 @@ end;
 procedure TForm1.DBEdit1Change(Sender: TObject);
 begin
   self.GestionBottons;
+end;
+
+procedure TForm1.BtnRechercherClick(Sender: TObject);
+begin
+  if NOT  DM.RechercherProduit(EdtRechercher.Text) then
+  ShowMessage('Ce Produit Est Non Enregistrée !!');
 end;
 
 end.
